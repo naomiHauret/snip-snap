@@ -1,8 +1,22 @@
 # snip-snap ✂️
 snip-snap ✂️ is a micro service that aims to transform images (resize and convert) on the fly by just providing the image URL.
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2FnaomiHauret%2Fsnip-snap)
+
+## Get started
+### Pre-requisites
+* Node version >= `14`
+* `npm` version >= `6.14`
+
+### Install
+* Install the dependencies with `npm i`
+* Launch the project with `npm start`
+* Hit `localhost:3000/api/transform?src=https://i.imgur.com/apaN6tW.jpeg&w=200&format=webp`. That's it !
+
+### Tests
+* You can run unit tests with `npm test`
+* Tests are written with [Jest](https://jestjs.io/)
 ## API
-### Res
 #### Endpoint
 ```
 GET /api/transform?src=<image-url>&w=<width>&h=<height>&format=<format>
@@ -14,7 +28,6 @@ Returns the image from `<image-url>` to `<width>`/`<height>` dimensions and `<fo
 * `w`: Target width in px. Can't be above 16383px for `webp`
 * `h`: Target height in px. Can't be above 16383px for `webp`
 * `format`: Target format. Can be `webp`, `jpg`, `jpeg`, `avif`, or `png`. Default value is `webp`.
-
 
 #### Responses
 
